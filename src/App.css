@@ -2,30 +2,31 @@
   text-align: center;
 }
 
-
 /* create new blog form */
 form {
   max-width: 400px;
   margin: 0 auto;
   text-align: center;
 }
- label {
+label {
   text-align: left;
   display: block;
 }
- h3 {
+h3 {
   font-size: 20px;
   color: #f1356d;
   margin-bottom: 30px;
 }
- input, textarea, select {
+input,
+textarea,
+select {
   width: 100%;
   padding: 6px 10px;
   margin: 10px 0;
   border: 1px solid #ddd;
   box-sizing: border-box;
   display: block;
-} 
+}
 
 button {
   background: #f1356d;
@@ -35,32 +36,31 @@ button {
   border-radius: 8px;
   cursor: pointer;
 }
-
-
-
 
 form {
   max-width: 400px;
   margin: 0 auto;
   text-align: center;
 }
- label {
+label {
   text-align: left;
   display: block;
 }
- h2 {
+h2 {
   font-size: 20px;
   color: #f1356d;
   margin-bottom: 30px;
 }
- input, textarea, select {
+input,
+textarea,
+select {
   width: 100%;
   padding: 6px 10px;
   margin: 10px 0;
   border: 1px solid #ddd;
   box-sizing: border-box;
   display: block;
-} 
+}
 
 button {
   background: #f1356d;
@@ -71,6 +71,6 @@ button {
   cursor: pointer;
 }
 
-
-
-
+button:active {
+  background: blue;
+}
