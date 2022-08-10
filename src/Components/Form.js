@@ -43,7 +43,7 @@ export default function Form({ handleClose, setStateFromChild }) {
 
       console.log(data);
       handleClose();
-      setStateFromChild(results);
+      setStateFromChild(form);
       setFormSubmitted(true);
       setErrorMessage("");
       setValidForm(true);
