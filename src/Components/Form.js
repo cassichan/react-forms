@@ -5,22 +5,18 @@ export default function Form({ handleClose, setStateFromChild }) {
   const [validForm, setValidForm] = useState(false);
   const [errorMessage, setErrorMessage] = useState("");
 
-  //one state with entire object and can add input fields as they are filled out
+  //one state with entire object that updates as user interacts
   const [form, setForm] = useState({});
 
   useEffect(() => {
     //fetch stuff when stuff in dependency list changes and update
-    // console.log('wow. something changed')
     if (form?.title?.length > 3 && form?.description?.length > 10) {
       setValidForm(true);
     } else {
       setValidForm(false);
     }
   }, [form]);
-  //added square brackets
 
-  //Equivalent to line 13
-  // const formSubmit = async (e) =>
   async function formSubmit(e) {
     e.preventDefault(); //stops page refresh
     if (!validForm) {
@@ -30,9 +26,7 @@ export default function Form({ handleClose, setStateFromChild }) {
     setErrorMessage("");
 
     try {
-      console.log("form submitted", form);
-
-      //really submit to an api
+      //submit to an api
       const results = await fetch("https://sql.bocacode.com/comments", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
@@ -40,14 +34,13 @@ export default function Form({ handleClose, setStateFromChild }) {
       }); //get request
       console.log(results);
       const data = await results.json(); //send results in json
-
       console.log(data);
-      handleClose();
-      setStateFromChild(form);
+
       setFormSubmitted(true);
       setErrorMessage("");
       setValidForm(true);
-      alert("Wow! Submitted!");
+      handleClose();
+      setStateFromChild(form);
     } catch (error) {
       console.log(error);
       setErrorMessage(
@@ -94,7 +87,7 @@ export default function Form({ handleClose, setStateFromChild }) {
           <option value="other">Other</option>
         </select>
         <h3>{form.author}</h3>
-        <button onClick={setStateFromChild("Hello father")}>
+        <button onClick={() => setStateFromChild("Hello father")}>
           Send stuff back to parent
         </button>
 

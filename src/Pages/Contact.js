@@ -12,7 +12,7 @@ export default function Contact() {
   console.log("stateFromChild =>", stateFromChild);
   return (
     <>
-      <h3>This is contact</h3>
+      <h3>This is contact -> hi {stateFromChild.title}</h3>
       <Button variant="primary" onClick={handleShow}>
         Launch demo modal
       </Button>
