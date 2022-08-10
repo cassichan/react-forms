@@ -28,14 +28,14 @@ select {
   display: block;
 }
 
-button {
+/* button {
   background: #f1356d;
   color: #fff;
   border: 0;
   padding: 8px;
   border-radius: 8px;
   cursor: pointer;
-}
+} */
 
 form {
   max-width: 400px;
@@ -62,14 +62,14 @@ select {
   display: block;
 }
 
-button {
+/* button {
   background: #f1356d;
   color: #fff;
   border: 0;
   padding: 8px;
   border-radius: 8px;
   cursor: pointer;
-}
+} */
 
 button:active {
   background: blue;
